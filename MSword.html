@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free online Document Editing with Microsoft Word | Microsoft 365</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Wave Music!</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEXz8/PzUyWBvAYFpvD/ugjz9fb19Pbz+fr39fr69vPy9frzRQB5uAAAofD/tgDz2tTh6tHzTBfzmYWw0Xx8xfH70H3R5vP16dHz4+Dn7d3zPQDzk36sz3Td6/N0wvH7znX07d4AnvDzvLHK3qur1vL43qu/SIryAAABeUlEQVR4nO3cSW7CUBBFUdKY3pi+NTaQZP9bzCQ2kfhSRmUyOHcDpaOav15PkiT9KguvPdUPLyksots3xP5hHl3qg8VxEtvxNPi5NSyn0c0fv5gVk5fYFstWuHoNjpCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkLBb4XER2+QuLKfPEO5Py+BuzQbt8KNcxVYeEju72SC6+47wMLz0kLAkSX82Cq89NQ4vSwDP1Tq26rMhjr/qTWz1JUHcXvPgqlZYz6LbpYT5W2z5uhVuZu+xERISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEnYrjN4vvT57vzTbRnduT1120Y0egZ2WhfdkoCRJ/6xv7S5GMPm5T6AAAAAASUVORK5CYII=" type="image/png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:black;
+        }
+        html{
+            scrollbar-width: none;
+        }
+        body{
+            position:relative;
+        }
+        header{
+            height:60px;
+            width:100vw;
+            display:flex;
+            background-color: white;
+        }
+        hr{
+            height:30px;
+            width:2px;
+            background-color:black;
+        }
+        .innerhead{
+            width:50%;
+            height:100%;
+        }
+        .hoverto:hover{
+            border-bottom:2px solid #091f2c;
+        }
+        .lefthead{
+            align-items: center;
+            width:80%;
+            padding-top:3px;
+        }
+        select{
+            outline:none;
+            border:none;
+        }
+        .lefthead ul,.righthead ul{
+            display:flex;
+            list-style-type: none;
+            padding:9px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .lefthead ul li a{
+            text-decoration:none;
+        }
+        .righthead{
+            padding-top:3px;
+            padding-left:100px;
+        }
+        .righthead ul li img{
+            height:50px;
+            width:50px;
+            border-radius:50%;
+        }
+        .righthead ul li{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #mainlogo{
+            height:90%;
+            width:150px;
+        }
+        
+        
+
+        /* main */
+        @keyframes appearboxonimage{
+            from{
+                transform:translateY(100px);
+                opacity:0.5;
+            }
+            to{
+                transform:translateY(0);
+                opacity:1;
+            }
+        }
+        main {
+            height:100vh;
+            width:100vw;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position:top center;
+            background-image: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/440250_M365-hero-1680x628-opiton1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fmt=png-alpha&fit=constrain');
+        }
+        .boxonimage{
+            height:200px;
+            width:500px;
+            position:absolute;
+            top:180px;
+            left:70px;
+            animation:appearboxonimage linear 1s;
+        }
+        #headmicro{
+            font-size:40px;
+            font-weight:500;
+        }
+        .darkbutton{
+            padding:15px;
+            border-radius:8px;
+            background-color:#091f2c;
+            color:white;
+            font-weight: bold;
+            text-decoration:none;
+        }
+        .lightbutton{
+            padding:13px;
+            border-radius:8px;
+            border:2px solid #091f2c;
+            text-decoration:none;
+            font-weight:bold;
+            color:#091f2c;
+        }
+
+        /* second Header*/
+
+        .secheader{
+            height:50px;
+            width:100vw;
+            background-color:white;
+            border-bottom:1px solid gray;
+            position:sticky;
+            top:0;
+            z-index: 1;
+            margin-bottom:5px;
+            padding:2px;
+        }
+        .secheader ul{
+            display:flex;
+            margin:15px;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        .secheader ul li a{
+            text-decoration:none;
+            padding:8px;
+        }
+        .secheader ul li a:hover{
+            border-bottom:3px solid #091f2c;
+            border-radius:5px;
+        }
+        #solidbutton{
+            background-color:#091f2c;
+            border-radius:5px;
+            color:white;
+            font-weight:600;
+        }
+        /* second main*/
+        @keyframes secondbox{
+                    from{
+                        transform: scale(0);
+                        opacity:0;
+                    }
+                    to{
+                        transform:scale(1);
+                        opacity:1;
+                    }
+                }
+        .secondmain{
+            height:max-content;
+            animation:appearboxonimage linear 1s;
+            animation-timeline:view();
+            animation-range:entry 0 cover 30%;
+        }
+        .secondmain .smallbox p{
+            margin:60px auto auto 50px;
+        }
+        
+        .smallbox{
+            width:500px;
+        }
+        .secondmain .smallbox h2{
+            margin:30px auto 0 50px;
+            font-size:40px;
+            font-weight:500;
+        }
+        .options{
+            height:50px;
+            width:75%;
+            margin:30px 0 0 50px;
+        }
+        .options a{
+            text-decoration: none;
+            padding:10px;
+            border-radius:20px;
+            background-color:#06161f1a;
+            color:black;
+            font-weight: 500;
+        }
+
+        .thirdmain{
+            height:max-content;
+            width:100%;
+            margin-top:70px;
+            animation:appearboxonimage linear 20s;
+            animation-timeline:view();
+            animation-range:entry 0 cover 40%;
+        }
+        .textbox p{
+            font-size: 15px;
+            text-align: center;
+            margin:10px;
+            font-weight:400;
+        }
+        .textbox h2{
+            font-size:40px;
+            color:black;
+            font-weight:500;
+            text-align:center;
+        }
+        .threeimage{
+            display:flex;
+            justify-content: space-around;
+            margin-top:50px;
+            margin-bottom:50px;
+        }
+        .outbox{
+            height:500px;
+            width:30%;
+            border-radius:20px;
+            background-color:white;
+            border:1.5px solid rgba(128, 128, 128, 0.11);
+        }
+        .outbox:hover{
+            box-shadow: 4px 5px 6px 6px rgba(0,0,0,0.1);
+        }
+        .inbox{
+            height:50%;
+            width:95%;
+            margin:10px auto;
+            background-repeat: no-repeat;
+            border-radius:20px;
+            background-position: center;
+            background-size:cover;
+        }
+        .img0{
+            background-image:url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/feature%20grid_01%20416X234?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=832&hei=354&qlt=100&fmt=png-alpha&fit=constrain');
+        }
+        .img1{
+            background-image:url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/1032386-carosel-02-416X234?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=832&hei=354&qlt=100&fit=constrain');
+        }
+        .img2{
+            background-image:url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/365500-m365-app-suite-fY26?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=832&hei=354&qlt=100&fmt=png-alpha&fit=constrain');
+        }
+        .imghed,.imgdec{
+            margin:30px;
+        }
+        .fa-greater-than{
+            padding:10px;
+            height:40px;
+            width:40px;
+            margin:15px 0 0 30px;
+            background-color:#091f2a;
+            border-radius:5px;
+            color:white;
+        }
+        .learn{
+            display:flex;
+        }
+        .learnmore{
+            padding:20px 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="lefthead innerhead">
+            <ul>
+                <li><img src="microsoft.png" alt="microsoftlogo" id="mainlogo"></li><hr>
+                <li><h3><a href="#"class="hoverto">Microsoft 365</a></h3></li>
+                <li><a href="#" class="hoverto">Word</a></li>
+                <li class="hoverto">
+                    <select name="plan" id="plan">
+                        <option value="select">Plans and Prising</option>
+                        <option value="for_home">For Home</option>
+                        <option value="for_business">For Business</option>
+                    </select>
+                </li>
+                <li class="hoverto">
+                    <select name="resources" id="resources">
+                        <option value="select">Resources</option>
+                        <option value="ai&writing">AI & Writing</option>
+                        <option value="essaywriting">Essay Writing</option>
+                        <option value="onlinedoucmentediting">Doc Editing</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="#" class="hoverto">Microsoft 365</a>
+                </li>
+            </ul>
+        </div>
+        <div class="righthead innerhead">
+            <ul>
+                <li class="hoverto">
+                    <select name="Allmicrosoft" id="Allmicrosoft">
+                        <option value="select">All Microsoft</option>
+                        <option value="Powerpoint">Ms PowerPoint</option>
+                        <option value="Excel">Ms Excel</option>
+                        <option value="Onenotes">Ms Onenotes</option>
+                    </select>
+                </li>
+                <li>
+                    <abbr title="Search Microsoft 365"><i class="fa-solid fa-magnifying-glass"></i></abbr>
+                </li>
+                <li>
+                    <p>Thirumala Reddy D</p>
+                    <img src="https://i.pinimg.com/736x/22/80/90/228090568a9d9fff09285a98dd03180d.jpg" alt="userprofilephoto">
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="boxonimage">
+            <p id="headmicro">
+                Microsoft Word
+            </p><br>
+            <p>Write, read, and create content that you can be proud of with AI-suggestions3 and powerful editing tools, wherever you are.</p><br><br><br>
+            <div class="buttons">
+                <a href="#" class="darkbutton">Open word</a>
+                <a href="#" class="lightbutton">See plans and pricing</a>
+            </div>
+        </div>
+    </main>
+    <div class="secheader">
+        <ul>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Key features</a></li>
+            <li><a href="#">Wath's new</a></li>
+            <li><a href="#">plans & pricing</a></li>
+            <li><a href="#">featured resources</a></li>
+            <li><a href="#">Microsoft 365 Apps</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#" id="solidbutton">See plans & pricing</a></li>
+        </ul>
+    </div>
+
+    <div class="secondmain">
+        <div class="smallbox">
+            <p>How it works</p>
+            <h2>Get the most out of your documents</h2>
+        </div>
+        <div class="options">
+            <a href="#">Create with confidence</a>
+            <a href="#">Refine with ease</a>
+            <a href="#">Sharpen your comprenshion</a>
+            <a href="#">Share and collaborate</a>
+        </div>
+    </div>
+    <div class="thirdmain">
+        <div class="textbox">
+            <p>KEY FEATURES</p>
+            <h2>Supercharge your reading and writing</h2>
+        </div>
+        <div class="threeimage">
+            <div class="outbox">
+                <div class="inbox img0"></div>
+                <h4 class="imghed">Copilet in Word</h4>
+                <p class="imgdec">Boost your creativity and productivity with Copilot.</p>
+                <div class="learn"><i class="fa-solid fa-greater-than"></i><p class="learnmore">Learn more</p></div>
+            </div>
+             <div class="outbox">
+                <div class="inbox img1"></div>
+                <h4 class="imghed">Edit in word</h4>
+                <p class="imgdec">Improve your grammar, spelling, and writing style with an intelligent editor.</p>
+                <div class="learn"><i class="fa-solid fa-greater-than"></i><p class="learnmore">Learn more</p></div>
+            </div>
+             <div class="outbox">
+                <div class="inbox img2"></div>
+                <h4 class="imghed">Get more with Microsoft 365</h4>
+                <p class="imgdec">Maximize your potential with Microsoft 365.</p>
+                <div class="learn"><i class="fa-solid fa-greater-than"></i><p class="learnmore">Learn more</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
